@@ -3,11 +3,11 @@ aplikasi budgeting
 
 # 📄 Business Requirement Specification (BRS)
 
-**Project Name:** Budgeting Application
-**Version:** 1.0
-**Date:** 31 Agustus 2025
-**Prepared for:** Development Team
-**Prepared by:** \[Matt / Project Owner]
+**Project Name:** Budgeting Application  
+**Version:** 1.0  
+**Date:** 31 Agustus 2025  
+**Prepared for:** Development Team  
+**Prepared by:** [Matt / Project Owner]
 
 ---
 
@@ -172,5 +172,3 @@ Membangun aplikasi budgeting internal berbasis web yang:
 * **Week 3:** Modul Budget & Actual Entry.
 * **Week 4:** Variance Report + Export.
 * **Week 5:** Testing, bug fixing, dokumentasi.
-
----

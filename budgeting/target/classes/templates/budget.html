@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Management</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Budget Management</h1>
+        <form id="budgetForm" method="post" action="/budget">
+            <div class="form-group">
+                <label for="costCenter">Cost Center</label>
+                <select id="costCenter" name="costCenter" class="form-control" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="coa">Chart of Account</label>
+                <select id="coa" name="coa" class="form-control" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="year">Year</label>
+                <input type="number" id="year" name="year" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="month">Month</label>
+                <input type="number" id="month" name="month" class="form-control" min="1" max="12" required>
+            </div>
+            <div class="form-group">
+                <label for="budgetValue">Budget Value</label>
+                <input type="number" id="budgetValue" name="budgetValue" class="form-control" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Budget</button>
+        </form>
+        <hr>
+        <h2 class="mt-4">Budget List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cost Center</th>
+                    <th>Chart of Account</th>
+                    <th>Year</th>
+                    <th>Month</th>
+                    <th>Budget Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Budget entries will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Center Management</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cost Center Management</h1>
+        <form id="costCenterForm" method="post" action="/costcenters">
+            <div class="mb-3">
+                <label for="ccCode" class="form-label">Cost Center Code</label>
+                <input type="text" class="form-control" id="ccCode" name="ccCode" required>
+            </div>
+            <div class="mb-3">
+                <label for="ccName" class="form-label">Cost Center Name</label>
+                <input type="text" class="form-control" id="ccName" name="ccName" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+        <h2 class="mt-5">Existing Cost Centers</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cost Center entries will be populated here -->
+                <tr>
+                    <td>CC001</td>
+                    <td>Marketing</td>
+                    <td>Marketing Department</td>
+                    <td>
+                        <a href="/costcenters/edit/CC001" class="btn btn-warning">Edit</a>
+                        <a href="/costcenters/delete/CC001" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <!-- Repeat for other cost centers -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

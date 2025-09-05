@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actual Expense Entry</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Input Actual Expense</h1>
+        <form action="/actual" method="post">
+            <div class="form-group">
+                <label for="costCenter">Cost Center</label>
+                <select id="costCenter" name="costCenter" class="form-control" required>
+                    <!-- Options will be populated from the backend -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="coa">Chart of Account</label>
+                <select id="coa" name="coa" class="form-control" required>
+                    <!-- Options will be populated from the backend -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="period">Period</label>
+                <input type="month" id="period" name="period" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" class="form-control" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <hr>
+        <h2>Actual Expenses</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cost Center</th>
+                    <th>COA</th>
+                    <th>Period</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Actual expenses will be populated from the backend -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

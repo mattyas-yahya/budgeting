@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variance Report</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Variance Report</h1>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>COA Code</th>
+                    <th>COA Name</th>
+                    <th>Budget</th>
+                    <th>Actual</th>
+                    <th>Variance</th>
+                    <th>Variance %</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here dynamically -->
+                <tr th:each="report : ${reports}">
+                    <td th:text="${report.coaCode}"></td>
+                    <td th:text="${report.coaName}"></td>
+                    <td th:text="${report.budget}"></td>
+                    <td th:text="${report.actual}"></td>
+                    <td th:text="${report.variance}"></td>
+                    <td th:text="${report.variancePercentage}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mt-3">
+            <a href="/budget" class="btn btn-primary">Back to Budget</a>
+            <a href="/export/report" class="btn btn-success">Export to Excel/PDF</a>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
